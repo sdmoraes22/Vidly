@@ -9,8 +9,8 @@ namespace Vidly
     public partial class VidlyModel : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
-
         public DbSet<Movie> Movies { get; set; }
+        
 
         public VidlyModel()
             : base("name=VidlyDbConfig")

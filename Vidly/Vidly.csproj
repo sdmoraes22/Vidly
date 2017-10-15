@@ -237,13 +237,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710151306265_InitialModel.cs" />
-    <Compile Include="Migrations\201710151306265_InitialModel.Designer.cs">
-      <DependentUpon>201710151306265_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201710152141276_InitialMigration.cs" />
+    <Compile Include="Migrations\201710152141276_InitialMigration.Designer.cs">
+      <DependentUpon>201710152141276_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710152107160_IsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\201710152107160_IsSubscribedToCustomer.Designer.cs">
-      <DependentUpon>201710152107160_IsSubscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201710152151263_PopulateMembershipTyper.cs" />
+    <Compile Include="Migrations\201710152151263_PopulateMembershipTyper.Designer.cs">
+      <DependentUpon>201710152151263_PopulateMembershipTyper.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -316,11 +316,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710151306265_InitialModel.resx">
-      <DependentUpon>201710151306265_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710152141276_InitialMigration.resx">
+      <DependentUpon>201710152141276_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710152107160_IsSubscribedToCustomer.resx">
-      <DependentUpon>201710152107160_IsSubscribedToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710152151263_PopulateMembershipTyper.resx">
+      <DependentUpon>201710152151263_PopulateMembershipTyper.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
