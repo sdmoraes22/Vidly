@@ -6,13 +6,12 @@ namespace Vidly
     using System.Linq;
     using Vidly.Models;
 
-    public partial class VidlyModel : DbContext
+    public partial class VidlyContext : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        
 
-        public VidlyModel()
+        public VidlyContext()
             : base("name=VidlyDbConfig")
         {
 

@@ -7,7 +7,7 @@
 <h1>Movies</h1>
 
 @{
-    if (Model.Customers.Count == 0)
+    if (Model.Customers == 0)
     {
         <p>There are no avaiable customers!</p>
     }
@@ -20,7 +20,6 @@
                     <th>Name</th>
                 </tr>                                
             </thead>
-
             @{
                 foreach (var customers in Model.Customers)
                 {
@@ -31,6 +30,5 @@
                 }
             }
         </table>
-                }
-
+    }
 }
