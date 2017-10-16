@@ -11,6 +11,7 @@ namespace Vidly.Controllers
     public class CustomersController : Controller
     {
         private VidlyContext _context;
+
         public CustomersController()
         {
             _context = new VidlyContext();
@@ -22,7 +23,7 @@ namespace Vidly.Controllers
         }
 
         // GET: Customers
-        public ActionResult Index()
+        public ViewResult Index()
         {
             var customers = _context.Customers.ToList();
             return View(customers);            
