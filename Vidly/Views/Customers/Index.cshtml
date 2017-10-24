@@ -9,15 +9,13 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Discount Rate</th>
         </tr>                                
     </thead>
     
     @foreach (var customer in Model)
      {
          <tr>
-             <td>@Html.ActionLink( (string)customer.Name, "Details", new { id = customer.Customerid})</td>             
+             <td>@Html.ActionLink( (string)customer.Name,"Details", new { id = customer.Customerid})</td>             
          </tr>
-     }
-    
+     }    
 </table>

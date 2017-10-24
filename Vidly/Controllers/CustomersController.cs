@@ -30,16 +30,14 @@ namespace Vidly.Controllers
         }
 
         [Route("customers/details/{id}")]
-        private ActionResult Details(int id)
+        public ActionResult Details(int id)
         {
-
             var customer = _context.Customers.SingleOrDefault(c => c.Customerid == id);
 
             if (customer == null)
             {
                 return HttpNotFound();
             }
-
             return View(customer);
         }
     }
