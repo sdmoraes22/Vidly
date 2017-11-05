@@ -245,6 +245,14 @@
     <Compile Include="Migrations\201711052248313_AddGenreToMovies.Designer.cs">
       <DependentUpon>201711052248313_AddGenreToMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711052252321_InsertsTableMemberShipTypes.cs" />
+    <Compile Include="Migrations\201711052252321_InsertsTableMemberShipTypes.Designer.cs">
+      <DependentUpon>201711052252321_InsertsTableMemberShipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711052301576_PopulateGenres.cs" />
+    <Compile Include="Migrations\201711052301576_PopulateGenres.Designer.cs">
+      <DependentUpon>201711052301576_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -322,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052248313_AddGenreToMovies.resx">
       <DependentUpon>201711052248313_AddGenreToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052252321_InsertsTableMemberShipTypes.resx">
+      <DependentUpon>201711052252321_InsertsTableMemberShipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711052301576_PopulateGenres.resx">
+      <DependentUpon>201711052301576_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
