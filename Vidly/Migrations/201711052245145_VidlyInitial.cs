@@ -3,7 +3,7 @@ namespace Vidly.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class VidlyInitial : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,8 @@ namespace Vidly.Migrations
                 c => new
                     {
                         Customerid = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false, maxLength: 255),
+                        BirthDate = c.DateTime(nullable: false),
                         IsSubscribedToNewsletter = c.Boolean(nullable: false),
                         MembershipTypeId = c.Byte(nullable: false),
                     })
@@ -25,6 +26,7 @@ namespace Vidly.Migrations
                 c => new
                     {
                         Id = c.Byte(nullable: false),
+                        Name = c.String(),
                         SignupFee = c.Short(nullable: false),
                         DurationInMonths = c.Byte(nullable: false),
                         DiscountRate = c.Byte(nullable: false),
