@@ -261,6 +261,10 @@
     <Compile Include="Migrations\201711030200119_MembershipTypeNameUpdateV2.Designer.cs">
       <DependentUpon>201711030200119_MembershipTypeNameUpdateV2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711050157289_CustomerDateTimeAdd.cs" />
+    <Compile Include="Migrations\201711050157289_CustomerDateTimeAdd.Designer.cs">
+      <DependentUpon>201711050157289_CustomerDateTimeAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -349,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711030200119_MembershipTypeNameUpdateV2.resx">
       <DependentUpon>201711030200119_MembershipTypeNameUpdateV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711050157289_CustomerDateTimeAdd.resx">
+      <DependentUpon>201711050157289_CustomerDateTimeAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
