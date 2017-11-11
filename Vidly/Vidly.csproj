@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201711052301576_PopulateGenres.Designer.cs">
       <DependentUpon>201711052301576_PopulateGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711102312009_CustomersNullableField.cs" />
+    <Compile Include="Migrations\201711102312009_CustomersNullableField.Designer.cs">
+      <DependentUpon>201711102312009_CustomersNullableField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -336,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052301576_PopulateGenres.resx">
       <DependentUpon>201711052301576_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711102312009_CustomersNullableField.resx">
+      <DependentUpon>201711102312009_CustomersNullableField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

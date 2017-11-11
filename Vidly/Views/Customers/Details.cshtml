@@ -6,6 +6,9 @@
 
     <h1>@Model.Name</h1>
     <ul>
-        <li>@Model.MembershipType.Name</li>
-        <li>@Model.BirthDate</li>        
+        <li>Membership Type: @Model.MembershipType.Name</li>
+        @if (Model.BirthDate != null)
+        {
+            <li>Birthdate: @Model.BirthDate.Value.ToString("dd/MM/yyyy")</li>
+        }        
     </ul>
