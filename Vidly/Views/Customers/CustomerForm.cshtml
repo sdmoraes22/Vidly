@@ -3,10 +3,17 @@
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if (Model.Customer == null)
+{
+    <h1>New Customer</h1>
+}
+else
+{
+    <h1>Edit</h1>
+}
 
-<h1>New Customer</h1>
 
-@using (Html.BeginForm("Create", "Customers"))
+@using (Html.BeginForm("Save", "Customers"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
@@ -28,7 +35,7 @@
             @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter, new { @class = "checkbox" }) Subscribe to NewsLetter?
         </label>
     </div>
-
+    @Html.HiddenFor(m => m.Customer.Customerid)
     <button type="submit" class="btn btn-primary">Save</button>
 }
 
