@@ -30,6 +30,27 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if(movie.Movieid == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Movieid == movie.Movieid);
+                movieInDb.Name = movie.Name;
+                movieInDb.Classification = movie.Classification;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.Genre = movie.Genre;
+            }
+            _context.SaveChanges();
+            return View();
+        }
+
+
+
         [Route("movies/details/{id}")]
         public ActionResult Details(int id)
         {
