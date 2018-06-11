@@ -261,6 +261,14 @@
     <Compile Include="Migrations\201801170004284_AddGenreMigration.Designer.cs">
       <DependentUpon>201801170004284_AddGenreMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806111804425_MovieModificationModel.cs" />
+    <Compile Include="Migrations\201806111804425_MovieModificationModel.Designer.cs">
+      <DependentUpon>201806111804425_MovieModificationModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806111818408_Initial.cs" />
+    <Compile Include="Migrations\201806111818408_Initial.Designer.cs">
+      <DependentUpon>201806111818408_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -353,6 +361,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801170004284_AddGenreMigration.resx">
       <DependentUpon>201801170004284_AddGenreMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111804425_MovieModificationModel.resx">
+      <DependentUpon>201806111804425_MovieModificationModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111818408_Initial.resx">
+      <DependentUpon>201806111818408_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
