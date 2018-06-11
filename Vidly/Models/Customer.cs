@@ -10,12 +10,13 @@ namespace Vidly.Models
     {
         public int Customerid { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Por favor faça a inserção do nome de usuário.")]
         [StringLength(255)]
         [Display(Name = "Nome")]
         public string Name { get; set; }
 
         [Display(Name = "Data de Nascimento")]
+        [Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
@@ -24,5 +25,8 @@ namespace Vidly.Models
 
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte Comum = 0;
     }
 }

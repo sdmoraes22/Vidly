@@ -12,20 +12,24 @@ namespace Vidly.Models
         public int Movieid { get; set; }
 
         [Required]
+        [Display(Name = "Nome")]
         public string Name { get; set; }
 
         [Required]
+        [Display(Name = "Classificação")]
         public string Classification { get; set; }
         
         public Genre Genre { get; set; }
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Data de Lançamento")]
         public DateTime? ReleaseDate { get; set; }
 
         [Required]
+        [Range (1, 20)]
+        [Display(Name = "Quantidade em Estoque")]
         public int NumberInStock { get; set; }
 
-        [Display(Name = "Genre")]
+        [Display(Name = "Gênero")]
         [Required]
         public byte GenreId { get; set; }
     }
