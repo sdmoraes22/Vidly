@@ -42,11 +42,20 @@ namespace Vidly.Controllers
                 var movieInDb = _context.Movies.Single(c => c.Movieid == movie.Movieid);
                 movieInDb.Name = movie.Name;
                 movieInDb.Classification = movie.Classification;
-                movieInDb.GenreId = movie.GenreId;
                 movieInDb.Genre = movie.Genre;
             }
             _context.SaveChanges();
-            return View();
+            return RedirectToAction("Index", "Movies");
+        }
+
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+            var viewModel = new MoviesFormViewModel
+            {
+                Genres = genres
+            };
+            return View("MoviesForm", viewModel);
         }
 
 
