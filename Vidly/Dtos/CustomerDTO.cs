@@ -22,6 +22,8 @@ namespace Vidly.Dtos
 
         public byte MembershipTypeId { get; set; }
 
+        public MembershipTypeDTO MembershipType { get; set; }
+
         public static readonly byte Unknown = 0;
         public static readonly byte Comum = 0;
     }
