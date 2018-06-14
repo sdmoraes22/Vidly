@@ -72,7 +72,7 @@ namespace Vidly.Controllers.Api
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-
+            
             Mapper.Map(customerDTO, customerInDb);
 
             _context.SaveChanges();
