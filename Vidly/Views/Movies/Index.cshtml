@@ -8,33 +8,67 @@
     <button class="btn btn-primary">New</button>
 </a>
 
-@{
-    if (Model.Count == 0)
-    {
-        <p>There are no avaiable movies!</p>
-    }
-    else
-    {
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Genre</th>
-                </tr>                
-            </thead>            
-            @{
-                foreach (var movies in Model)
-                {
-                    <tr>
-                        <td>@Html.ActionLink((string)movies.Name, "Edit", new { id = movies.Movieid })</td>
-                        <td>@movies.Genre.Name</td>
-                    </tr>
-                }
-            }
-        </table>
-    }
+<table class="table table-bordered table-hover" id="movies">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Delete</th>
+        </tr>                
+    </thead>            
+</table>
 
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            //Carregar Listagem de Filmes via Ajax consumindo a API
+            var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, movies) {
+                            return "<a href='/movies/edit/" + movies.movieid + "'>" + movies.name + "</a>"
+                        }
+                    },
+                    {
+                        data: "genre.name",
+                    },
+                    {
+                        data: "movieid",
+                        render: function (data) {
+                            return "<button class= 'btn-link js-delete' data-movie-id=" + data + ">Remover Filme</button>"
+                        }
+                    }
+                ]
+            });
+
+            //Remoção de filme via ajax
+            $("#movies").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Têm certeza de que deseja remover este filme?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/movies/" + $(button).attr("data-movie-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+
+                        })
+                    }
+                });
+            });
+        });
+
+    </script>
 }
+
 
 
 

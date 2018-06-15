@@ -30,5 +30,7 @@ namespace Vidly.Dtos
         [Display(Name = "Gênero")]
         [Required]
         public byte GenreId { get; set; }
+
+        public GenreDTO Genre { get; set; }
     }
 }
