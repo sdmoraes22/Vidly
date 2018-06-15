@@ -29,6 +29,8 @@ namespace Vidly.Models
         [Display(Name = "Quantidade em Estoque")]
         public int NumberInStock { get; set; }
 
+        public int NumberAvaiable { get; set; }
+
         [Display(Name = "Gênero")]
         [Required]
         public byte GenreId { get; set; }
