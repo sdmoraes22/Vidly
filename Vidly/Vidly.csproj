@@ -262,7 +262,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
-    <Compile Include="Controllers\Api\NewRentalController.cs" />
+    <Compile Include="Controllers\Api\NewRentalsController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Dtos\NewRentalDTO.cs" />
     <Compile Include="Controllers\CustomersController.cs" />

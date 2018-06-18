@@ -8,16 +8,16 @@ using Vidly.Models;
 
 namespace Vidly.Controllers.Api
 {
-    public class NewRentalController : ApiController
+    public class NewRentalsController : ApiController
     {
         private VidlyContext _context;
 
-        public NewRentalController()
+        public NewRentalsController()
         {
             _context = new VidlyContext();
         }
 
-        //Get /api/newrental
+        //Get /api/NewRentals
         [HttpPost]
         public IHttpActionResult CreateRentals(NewRentalDTO newRental)
         {
@@ -26,7 +26,7 @@ namespace Vidly.Controllers.Api
 
             var movies = _context
                 .Movies
-                .Where(m => newRental.MoviesIds.Contains(m.Movieid))
+                .Where(m => newRental.MovieIds.Contains(m.Movieid))
                 .ToList();
             
             foreach (var movie in movies)
@@ -43,6 +43,7 @@ namespace Vidly.Controllers.Api
                     Movie = movie,
                     DateRented = DateTime.Now
                 };
+
                 _context.Rentals.Add(rental);
             }
             _context.SaveChanges();
